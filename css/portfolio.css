@@ -1,0 +1,139 @@
+.hero {
+  margin-top: 77px;
+}
+
+section {
+  margin: 18px 0;
+}
+
+.portfolio-intro {
+  padding: 30px 1rem 20px;
+  max-width: 850px;
+}
+
+.portfolio-intro h1 {
+  margin-bottom: 12px;
+}
+
+.portfolio-intro p {
+  max-width: 760px;
+  line-height: 1.7;
+}
+
+.projectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 22px;
+  padding: 1rem;
+
+  .projecto {
+    display: flex;
+    flex-direction: column;
+    background: var(--panel);
+    border-radius: 12px;
+    overflow: hidden;
+
+    .infos {
+      padding: 12px;
+    }
+
+    .img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.222);
+      border-radius: 0 12px 12px 0;
+      height: 160px;
+      width: 100%;
+    }
+  }
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.project-meta span {
+  font-size: 0.78rem;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+}
+
+.project-level {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.project-description {
+  line-height: 1.55;
+}
+
+.btn-ghost {
+  display: inline-block;
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  padding: 8px 18px;
+  border-radius: 9px;
+  margin: 12px auto;
+  font-weight: 600;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.btn-ghost:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.contactsection {
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 28px 12px;
+  gap: 12px;
+  text-align: center;
+}
+
+.contactsection p {
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+.solution-help {
+  text-align: center;
+  padding: 35px 1rem;
+}
+
+.solution-help p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.solution-note {
+  text-align: center;
+  padding: 20px 1rem 35px;
+}
+
+.solution-note p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}

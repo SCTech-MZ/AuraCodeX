@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Admin page</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+<body>
+    <header>
+        <div class="name">AuraCodeX</div>
+        <nav>
+            <ul>
+                <li><a href="#">logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <nav>
+                <ul>
+                    <li>
+                        <button data-page="dashboard">Dashboard</button>
+                    </li>
+                    <li>
+                        <button data-page="leads">Leads</button>
+                    </li>
+                    <li>
+                        <button data-page="projectsActives">Projects actives</button>
+                    </li>
+                    <li>
+                        <button data-page="manutence">Manutences</button>
+                    </li>
+                    <li>
+                        <button data-page="setings">Setings</button>
+                    </li>
+                    <li>
+                        <button data-page="projects">Projects</button>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="container">
+            <section id="dashboard"></section>
+            <section id="leads"></section>
+            <section id="projectsActives"></section>
+            <section id="manutence"></section>
+            <section id="setings"></section>
+            <section id="projects"></section>
+        </div>
+    </main>
+</body>
+</html>
