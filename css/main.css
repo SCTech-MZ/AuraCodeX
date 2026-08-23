@@ -115,6 +115,16 @@ nav .wrap {
   .nav-links {
     display: none;
   }
+  .open{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #0a0e1a;
+    top: 72px;
+    right: 40%;
+    padding: 27px;
+    left: 0;
+  }
 }
 
 /* CONTACT */
@@ -213,3 +223,4 @@ footer .wrap {
   flex-wrap: wrap;
   gap: 1rem;
 }
+
