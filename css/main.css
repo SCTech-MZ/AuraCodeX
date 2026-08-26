@@ -222,5 +222,10 @@ footer .wrap {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+  div {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
 }
 
