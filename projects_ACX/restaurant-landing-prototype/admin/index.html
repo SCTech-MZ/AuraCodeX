@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACX restaurant — Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+  <body class="admin-body">
+    <header class="admin-header">
+      <a class="brand" href="../index.html"
+        ><span class="brand-mark">ACX</span
+        ><span><strong>restaurant</strong><small>Admin</small></span></a
+      ><a class="btn btn-light" href="../index.html">View website</a>
+    </header>
+    <main class="admin-layout">
+      <aside class="admin-sidebar">
+        <button data-section="dashboard" class="nav-link active">Overview</button>
+        <button data-section="orders" class="nav-link">Orders</button>
+        <button data-section="dishes" class="nav-link">Menu</button>
+        <button data-section="reservations" class="nav-link">Reservations</button>
+        <button data-section="settings" class="nav-link">Settings</button>
+      </aside>
+      <section class="admin-content">
+        <div id="dashboard">
+          <span class="eyebrow">Restaurant control</span>
+          <h1>Good evening, Silvio.</h1>
+          <p class="muted">Here's what's happening today.</p>
+          <div class="stats-grid">
+            <div class="stat">
+              <span>Today's orders</span><strong id="statOrders">0</strong
+              ><small>+12% vs yesterday</small>
+            </div>
+            <div class="stat">
+              <span>Revenue</span><strong id="statRevenue">$0</strong
+              ><small>Demo data</small>
+            </div>
+            <div class="stat">
+              <span>Reservations</span><strong id="statReservations">0</strong
+              ><small>Upcoming</small>
+            </div>
+            <div class="stat">
+              <span>Website visits</span><strong>326</strong
+              ><small>+18% this week</small>
+            </div>
+          </div>
+        </div>
+        <div class="admin-section" id="orders" style="display: none">
+          <div class="admin-title">
+            <div>
+              <span class="eyebrow">Live orders</span>
+              <h2>Orders</h2>
+            </div>
+            <button class="btn btn-dark" id="clearOrders">
+              Clear demo orders
+            </button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>Customer</th>
+                  <th>Items</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTable"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="admin-section" id="dishes" style="display: none">
+          <div class="admin-title">
+            <div>
+              <span class="eyebrow">Content</span>
+              <h2>Menu management</h2>
+            </div>
+            <button class="btn btn-dark" id="addDishBtn">+ Add dish</button>
+          </div>
+          <div class="admin-dishes" id="adminDishes"></div>
+        </div>
+        <div class="admin-section" id="reservations" style="display: none">
+          <div class="admin-title">
+            <div>
+              <span class="eyebrow">Bookings</span>
+              <h2>Reservations</h2>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Guest</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Guests</th>
+                  <th>Occasion</th>
+                </tr>
+              </thead>
+              <tbody id="reservationsTable"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="admin-section" id="settings" style="display: none">
+          <div class="admin-title">
+            <div>
+              <span class="eyebrow">Restaurant profile</span>
+              <h2>Settings</h2>
+            </div>
+          </div>
+          <div class="settings-card">
+            <label>Restaurant name<input value="ACX restaurant" /></label
+            ><label>Phone<input value="+258 841074767" /></label
+            ><label>Address<input value="18 Garden Street, Downtown" /></label
+            ><label
+              >Opening hours<input
+                value="Every day · 11:00 AM – 11:00 PM" /></label
+            ><button class="btn btn-dark" id="saveSettings">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="modal-backdrop" id="dishModal" style="display: none">
+      <div class="modal">
+        <button class="modal-close" id="closeDish">×</button
+        ><span class="eyebrow">Menu management</span>
+        <h2>Add dish</h2>
+        <form id="dishForm" class="form-grid">
+          <label>Name<input name="name" required /></label
+          ><label
+            >Price<input
+              name="price"
+              type="number"
+              step=".01"
+              required /></label
+          ><label
+            >Category<select name="category">
+              <option>Popular</option>
+              <option>Starters</option>
+              <option>Main</option>
+              <option>Desserts</option>
+              <option>Drinks</option>
+            </select></label
+          ><label>Tag<input name="tag" placeholder="Popular / New" /></label
+          ><label class="full-field"
+            >Description<textarea name="description" required></textarea></label
+          ><button class="btn btn-dark full-field">Save dish</button>
+        </form>
+      </div>
+    </div>
+    <script src="../js/storage.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

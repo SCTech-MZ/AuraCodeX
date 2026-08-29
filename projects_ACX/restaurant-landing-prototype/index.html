@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ACX restaurant — modern restaurant landing page prototype with menu, ordering and reservations.">
+  <title>ACX restaurant — Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="La Tavola home">
+      <span class="brand-mark" aria-hidden="true">ACX</span>
+      <span><strong>ACX restaurant</strong><small>Kitchen & Wine</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+      <button class="btn btn-dark nav-order" data-open-cart>Order now <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-copy">
+        <span class="eyebrow">Seasonal dining · Est. 2018</span>
+        <h1>Good food.<br><em>Good company.</em><br>Good memories.</h1>
+        <p>Thoughtfully prepared dishes, warm hospitality and ingredients chosen at their best.</p>
+        <div class="hero-actions">
+          <a class="btn btn-dark" href="#menu">Explore menu</a>
+          <button class="btn btn-light" data-open-reservation>Reserve a table</button>
+        </div>
+        <div class="hero-meta">
+          <div><strong>4.9/5</strong><span>Guest rating</span></div>
+          <div><strong>10k+</strong><span>Happy guests</span></div>
+          <div><strong>11–23</strong><span>Open daily</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image image-food"></div>
+        <div class="floating-card">
+          <span class="mini-icon">★</span>
+          <div><strong>Chef's choice</strong><span>Truffle tagliatelle</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="special section">
+      <div class="special-image image-special"></div>
+      <div class="special-copy">
+        <span class="eyebrow">Today's special</span>
+        <h2>Truffle Tagliatelle</h2>
+        <p>Hand-cut pasta, parmesan cream, black truffle and fresh herbs. A simple plate made unforgettable.</p>
+        <div class="price-row"><strong>$19</strong><del>$24</del><span>20% off today</span></div>
+        <button class="btn btn-dark" data-special-order>Order today's special</button>
+      </div>
+    </section>
+
+    <section class="menu-section section" id="menu">
+      <div class="section-heading">
+        <div><span class="eyebrow">From our kitchen</span><h2>Explore the menu</h2></div>
+        <div class="menu-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="menuSearch" placeholder="Search dishes..." aria-label="Search dishes"></div>
+      </div>
+      <div class="category-tabs" id="categoryTabs"></div>
+      <div class="dish-grid" id="dishGrid"></div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-copy"><span class="eyebrow">Our story</span><h2>A table for every kind of moment.</h2>
+        <p>ACX restaurant was born from a love of generous food and unhurried evenings. Our kitchen combines familiar comfort with seasonal ingredients and a little curiosity.</p>
+        <p>Come for dinner, stay for the conversation.</p>
+        <a class="text-link" href="#contact">Find your way to us <span>→</span></a>
+      </div>
+      <div class="about-images"><div class="about-photo image-interior"></div><div class="about-photo small image-chef"></div></div>
+    </section>
+
+    <section class="gallery section" id="gallery">
+      <div class="section-heading"><div><span class="eyebrow">Inside ACX restaurant</span><h2>A taste of the experience</h2></div></div>
+      <div class="gallery-grid">
+        <div class="gallery-item image-gallery-1"></div><div class="gallery-item image-gallery-2"></div>
+        <div class="gallery-item image-gallery-3"></div><div class="gallery-item image-gallery-4"></div>
+        <div class="gallery-item image-gallery-5"></div>
+      </div>
+    </section>
+
+    <section class="reviews section" id="reviews">
+      <div class="section-heading centered"><span class="eyebrow">Guestbook</span><h2>What our guests say</h2></div>
+      <div class="review-grid">
+        <article class="review"><div class="stars">★★★★★</div><blockquote>“Beautiful food, relaxed atmosphere and genuinely lovely service. The pasta was exceptional.”</blockquote><strong>Sarah M.</strong><span>Local guide</span></article>
+        <article class="review"><div class="stars">★★★★★</div><blockquote>“We came for a quick dinner and ended up staying for dessert and wine. Exactly what a restaurant should feel like.”</blockquote><strong>Daniel R.</strong><span>Verified guest</span></article>
+        <article class="review"><div class="stars">★★★★★</div><blockquote>“The menu changes just enough to keep things interesting. A new favorite in the city.”</blockquote><strong>Emma T.</strong><span>Verified guest</span></article>
+      </div>
+    </section>
+
+    <section class="visit section" id="contact">
+      <div class="visit-card">
+        <span class="eyebrow">Come by</span><h2>Find your table.</h2>
+        <p>18 Garden Street, Downtown<br>Open every day · 11:00 AM – 11:00 PM</p>
+        <div class="visit-actions"><button class="btn btn-dark" data-open-reservation>Reserve a table</button><a class="btn btn-light" href="https://www.google.com/maps" target="_blank" rel="noopener">Get directions</a></div>
+        <div class="contact-lines"><span>+258 841 074767</span><span>hello@acxrestaurant.example</span></div>
+      </div>
+      <div class="map-placeholder"><div class="map-pin"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><strong>ACX restaurant</strong><span>Downtown</span></div>
+      <div class="containerbtn">
+        <a href="/admin/index.html" class="btn btn-light">Admin Panel</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><a class="brand" href="#top"><span class="brand-mark">ACX</span><span><strong>ACX restaurant</strong><small>Kitchen & Wine</small></span></a><p>Seasonal food, thoughtful service and good company.</p></div>
+    <div class="footer-links"><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+    <div class="footer-social"><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="Facebook">Facebook</a><a href="#" aria-label="TikTok">TikTok</a></div>
+    <small class="copyright">© 2026 ACX restaurant. Demo by <h2>AuraCodeX</h2>.</small>
+  </footer>
+
+  <div class="modal-backdrop" id="cartModal" style="display: none;">
+    <div class="modal cart-modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <button class="modal-close" data-close-cart aria-label="Close">×</button><span class="eyebrow">Your order</span><h2 id="cartTitle">Cart</h2>
+      <div id="cartItems" class="cart-items"></div><div class="cart-total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+      <button class="btn btn-dark full" id="checkoutBtn">Continue to WhatsApp</button>
+      <p class="modal-note">Demo mode: checkout creates a pre-filled WhatsApp message.</p>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="reservationModal" style="display: none;">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="reservationTitle">
+      <button class="modal-close" data-close-reservation aria-label="Close">×</button><span class="eyebrow">Book your table</span><h2 id="reservationTitle">Reservation</h2>
+      <form id="reservationForm" class="form-grid">
+        <label>Full name<input name="name" required></label><label>Phone<input name="phone" type="tel" required></label>
+        <label>Date<input name="date" type="date" required></label><label>Time<input name="time" type="time" required></label>
+        <label>Guests<select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></label>
+        <label>Occasion<select name="occasion"><option>Regular dinner</option><option>Birthday</option><option>Anniversary</option><option>Business</option></select></label>
+        <label class="full-field">Notes<textarea name="notes" rows="3" placeholder="Optional"></textarea></label>
+        <button class="btn btn-dark full-field" type="submit">Confirm reservation</button>
+      </form>
+      <div id="reservationSuccess" class="success-message" style="display: none;"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/storage.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/reservation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
